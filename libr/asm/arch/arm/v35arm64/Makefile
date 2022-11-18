@@ -30,7 +30,8 @@ $(ALIBS): arch-arm64 arch-armv7
 
 ## ARM64
 arch-arm64:
-	git clone -q https://github.com/radareorg/vector35-arch-arm64 arch-arm64
+	# git clone -q https://github.com/radareorg/vector35-arch-arm64 arch-arm64
+	git clone -q https://github.com/opensandboxdev/vector35-arch-arm64 arch-arm64
 	cd arch-arm64 && git checkout -q radare2-wip > /dev/null && git reset --hard $(ARCH_ARM64_COMMIT)
 
 $(V35ARM64_HOME)/arm64dis.a arm64dis.a: $(ALIBS)
